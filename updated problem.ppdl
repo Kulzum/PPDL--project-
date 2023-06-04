@@ -1,0 +1,28 @@
+(define (problem letseat-simple-updated)
+  (:domain letseat)
+  
+  (:objects
+    arm - robot
+    cupcake1 cupcake2 - cupcake ; Second cupcake added
+    table - location
+    plate - location
+    unicorn - bot ; Unicorn object added
+  )
+
+  (:init
+    (on arm table)
+    (on cupcake1 table)
+    (on cupcake2 table) ; Second cupcake added
+    (arm-empty)
+    (path table plate)
+  )
+
+  (:goal 
+    (and 
+      (on cupcake1 plate)
+      (on cupcake2 plate)
+      (eaten cupcake1 unicorn)
+      (eaten cupcake2 unicorn) ; Sub-goal for the unicorn to eat both cupcakes
+    )
+  )
+)
