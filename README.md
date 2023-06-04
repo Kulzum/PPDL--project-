@@ -12,9 +12,6 @@ To run the PDDL code, you need to have a PDDL planner installed on your machine.
 1. Clone the repository:
 
 
-   git clone https://github.com/your-username/lets-eat-pddl.git
-
-
 2. Navigate to the cloned repository:
 
 
